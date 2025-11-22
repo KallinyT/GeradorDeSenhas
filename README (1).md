@@ -57,7 +57,7 @@ O sistema avalia a senha em níveis:
 - Temas de acessibilidade.
 
 ## 8. Prints da Aplicação
-![Interface do gerador](./img/print)
+![Interface do gerador](./img/print.png)
 
 ## 9. Conclusão
 O Gerador de Senhas demonstra a aplicação prática de conceitos fundamentais de programação web e segurança digital. A ferramenta cumpre seu objetivo acadêmico, proporcionando uma interface simples e funcionalidades essenciais para a criação de senhas fortes.
