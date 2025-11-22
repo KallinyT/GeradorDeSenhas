@@ -36,26 +36,47 @@ btnGerar.addEventListener("click", () => {
 });
 
 const generatePassword = (hasNum, hasSim, hasMin, hasMax, Length) => {
-    const newArray = [
-        ...(hasNum ? numbers : []),
-        ...(hasSim ? symbols : []),
-        ...(hasMin ? LowercaseCaracters : []),
-        ...(hasMax ? UppercaseCaracters : [])
-    ];
+    let newArray = [];
+    let forcedChars = [];
+
+    if (hasNum) {
+        newArray.push(...numbers);
+        forcedChars.push(numbers[Math.floor(Math.random() * numbers.length)]);
+    }
+
+    if (hasSim) {
+        newArray.push(...symbols);
+        forcedChars.push(symbols[Math.floor(Math.random() * symbols.length)]);
+    }
+
+    if (hasMin) {
+        newArray.push(...LowercaseCaracters);
+        forcedChars.push(LowercaseCaracters[Math.floor(Math.random() * LowercaseCaracters.length)]);
+    }
+
+    if (hasMax) {
+        newArray.push(...UppercaseCaracters);
+        forcedChars.push(UppercaseCaracters[Math.floor(Math.random() * UppercaseCaracters.length)]);
+    }
 
     if (newArray.length === 0) return;
 
-    let password = "";
+    
+    let password = [...forcedChars];
 
-    for (let i = 0; i < Length; i++) {
+    while (password.length < Length) {
         const randomIndex = Math.floor(Math.random() * newArray.length);
-        password += newArray[randomIndex];
+        password.push(newArray[randomIndex]);
     }
+
+   
+    password = password.sort(() => Math.random() - 0.5).join("");
 
     passInput.value = password;
 
     checkStrength(password, hasNum, hasSim, hasMin, hasMax);
 };
+
 
 
 function checkStrength(password, num, sim, min, mai) {
