@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Forte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <main>
+        <div>
+            <label class="title">SEU GERADOR DE SENHA AUTOMÁTICO</label>
+        </div>
+        <div class="container">
+
+            <div class="form-image">
+                <img src="img/undraw_forgot-password_nttj.svg" alt="Imagem de senha">
+            </div>
+            <div class="gerar">
+                <input id="inputPasswordId" type="text" placeholder="Senha gerada">
+              
+                <div>
+                    <input id="inputLengthId" type="range" min="6" max="24" />
+                    <label for="inputLengthId">Tamanho da senha</label>
+                </div>
+
+                <div id="passwordStrength"></div>
+
+                <div>
+                    <input id="chkMin" type="checkbox" />
+                    <label for="chkMin">Letras minúsculas</label>
+                </div>
+                <div>
+                    <input id="chkMai" type="checkbox" />
+                    <label for="chkMai">Letras maiúsculas</label>
+                </div>
+                <div>
+                    <input id="chkNum" type="checkbox" />
+                    <label for="chkNum">Números</label>
+                </div>
+                <div>
+                    <input id="chkSim" type="checkbox" />
+                    <label for="chkSim">Símbolos</label>
+                </div>
+
+                <button id="btnGerar">Gerar Senha</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

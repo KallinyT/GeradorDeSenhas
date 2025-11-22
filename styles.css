@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    background-image: url("img/cadeados.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;     
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    height: 50px;
+
+}
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    max-width: 900px;
+   
+}
+
+.form-image img {
+    width: 250px;
+    height: auto;
+   
+}
+
+.gerar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    
+}
+
+#passwordStrength {
+    margin-top: 2px;      
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+}
+
+input {
+    padding: 5px;
+    outline: none;
+    accent-color: fuchsia;
+    border: 1px solid fuchsia;
+    border-radius: 5px;
+}
+
+input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+}
+
+
+input[type=range] {
+    width: 90%;
+}
+.gerar div {
+    display: flex;
+    align-items: center; /* alinha verticalmente o checkbox com o texto */
+    gap: 8px; /* espaço entre checkbox e texto */
+}
+
+button {
+    background-color: fuchsia;
+    cursor: pointer;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
