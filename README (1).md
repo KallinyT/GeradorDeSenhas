@@ -33,7 +33,7 @@ O usuário pode selecionar:
 ### 4.2 Avaliação da Força da Senha
 O sistema avalia a senha em níveis:
 - Fraca
-- Média
+- Moderada
 - Forte
 
 ### 4.3 Usabilidade
